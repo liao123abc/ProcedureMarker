@@ -13,6 +13,8 @@ A plugin demonstrates Jetpack compose capabilities on IntelliJ Platform
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <toolWindow id="ABT" anchor="right" secondary="false" factoryClass="com.thomasliao.proceduremarker.ProcedureMarkerWindow"
+                    icon="/icons/abt.svg"/>
     </extensions>
 
     <actions>

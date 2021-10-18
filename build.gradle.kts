@@ -20,13 +20,14 @@ repositories {
 }
 
 dependencies {
+    //    implementation(compose.desktop.macos_x64)
     implementation(compose.desktop.currentOs)
     testImplementation("junit", "junit", "4.12")
 }
 
 fun getLocalDistributionPath(): String {
     return if (System.getenv("DEV_LINE") != null) {
-        "${System.getProperty("user.dir")}/2020.3.1/Contents" //仅用于rdm//aplus编译，控制体积已删除plugins文件夹，不能用于gui启动展示
+        "${System.getProperty("user.dir")}/2020.3.1/Contents" //仅用于jenkins编译，控制体积已删除plugins文件夹，不能用于gui启动展示
     } else {
         //本地as路径
         if (org.gradle.internal.os.OperatingSystem.current().isWindows) {
